@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Image Gallery </title>
+
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
+
+   <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" /> -->
+
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./css/style.css" />
+   <link rel="stylesheet" href="/css/gallery.css">
+
+
+<style>
+
+*{
+    margin: 0; padding: 0;font-family: sans-serif;
+ }
+ body{
+    background: #fff;
+ }
+ h1{
+    font-size: 50px;
+    padding-top: 12px;
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+  
+ .img-gallery{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 30px;
+ }
+ .img-gallery img{
+    width: 100%;
+    cursor: pointer;
+    transition: 0.4s;
+ }
+ .img-gallery img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+ }
+ .full-img{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+ }
+ .full-img img{
+    width: 90%;
+    max-width: 800px;
+ }
+ .full-img span{
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+ }
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+    <!-- header section starts  -->
+
+    <header class="header">
+      <!-- We<span>Build</span> -->
+      <a href="#" class="logo"><img src="images/logo.png" id="main-logo" alt="logo" /></a>
+
+      <nav class="navbar">
+         <a href="index.php">home</a>
+         <a href="#services">services</a>
+         <a href="list.php">Ashram List</a>
+         <a href="gallery.html">Gallery </a>
+         <a href="#blogs">blogs</a>
+         <a href="#about">about</a>
+         <a href="contact.php">contact</a>
+      </nav>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <a href="./Panel/adminlogin.php"><div id="login-btn"  class="fas fa-user"></div></a>
+      </div>
+
+      <form class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box" />
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+
+      
+
+   </header>
+
+   <div class="info">
+      <i class="fas fa-phone"></i>
+      <h3>phone number</h3>
+      <p>+91-99928-72204</p>
+      <p>+91-99999-99999</p>
+   </div>
+
+   <div class="info">
+      <i class="fas fa-envelope"></i>
+      <h3>email address</h3>
+      <p>shaikhanas@gmail.com</p>
+      <p>anasbhai@gmail.com</p>
+   </div>
+
+   <div class="info">
+      <i class="fas fa-map-marker-alt"></i>
+      <h3>office address</h3>
+      <p>Fatehabad, Haryana 125050</p>
+   </div>
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+   </div>
+
+
+
+   <!-- header section ends -->
+
+
+<!-- Gallery Section Start  -->
+
+<h1 >Our Image Gallery</h1>
+
+<div class="full-img" id="fullImgBox">
+   <img src="./images/gallery01.jpg" alt="" id="fullImg">
+   <span onclick="closeFullImg()">X</span>
+</div>
+
+<div class="img-gallery">
+   <img src="./images/gallery01.jpg" alt="Gallery-Img" onclick="openFullImg(this.src)">
+   <img src="./images/gallery02.jpg" alt="Gallery-Img" onclick="openFullImg(this.src)">
+   <img src="./images/gallery03.jpg" alt="Gallery-Img" onclick="openFullImg(this.src)">
+   <img src="./images/gallery04.jpg" alt="Gallery-Img" onclick="openFullImg(this.src)">
+   <img src="./images/gallery05.jpg" alt="Gallery-Img" onclick="openFullImg(this.src)">
+   <img src="./images/Banner-4.jpg" alt="Gallery-Img" onclick="openFullImg(this.src)">
+   <img src="./images/Banner-2.jpg" alt="Gallery-Img" onclick="openFullImg(this.src)">
+   <img src="./images/Banner-3.jpg" alt="Gallery-Img" onclick="openFullImg(this.src)">
+   <img src="./images/gallery05.jpg" alt="Gallery-Img" onclick="openFullImg(this.src)">
+   <img src="./images/gallery06.jpg" alt="Gallery-Img" onclick="openFullImg(this.src)">
+   <img src="./images/gallery07.jpg" alt="Gallery-Img" onclick="openFullImg(this.src)">
+   <img src="./images/galler07.jpg" alt="Gallery-Img" onclick="openFullImg(this.src)">
+</div>
+
+
+<script>
+
+var fullImgBox = document.getElementById("fullImgBox");
+var fullImg = document.getElementById("fullImg")
+
+function openFullImg(pic){
+   fullImgBox.style.display = "flex";
+   fullImg.src = pic;
+}
+function closeFullImg(){
+   fullImgBox.style.display = "none";
+}
+
+</script>
+
+
+<!-- Gallery Section End  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- footer section starts  -->
+
+ <section class="footer">
+   <div class="links">
+      <a class="btn" href="./index.php">home</a>
+      <a class="btn" href="#services">services</a>
+      <a class="btn" href="./list.php">Ashram List</a>
+      <a class="btn" href="./gallery.html">Gallery</a>
+      <a class="btn" href="./index.php">blogs</a>
+      <a class="btn" href="./index.php">about</a>
+      <a class="btn" href="./contact.php">contact</a>
+   </div>
+
+   <div class="credit">
+      © 2022-2023 sadgurukirpaapnaghar.com
+      <!-- created by <span>mr. Aman indora </span> | all rights reserved! -->
+   </div>
+</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+   <!-- custom js file link  -->
+   <script src="./js/script.js"></script>  
+
+   <script src="./js/gallery.js"></script>
+
+</body>
